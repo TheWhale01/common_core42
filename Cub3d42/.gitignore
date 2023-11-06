@@ -1,0 +1,11 @@
+.vscode/
+obj/
+libft/bin/
+libft/obj/
+.nfs*
+vgcore*
+cub3d
+cub3D
+*.json
+.cache/
+

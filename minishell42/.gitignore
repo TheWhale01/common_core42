@@ -1,0 +1,12 @@
+.vscode/
+obj/
+*test*
+*.pdf
+no_perm
+*outfile*
+vgcore*
+minishell
+libft/bin/
+libft/obj/
+.nfs*
+readline

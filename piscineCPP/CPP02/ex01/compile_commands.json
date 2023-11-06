@@ -1,0 +1,38 @@
+[
+ {
+  "directory": "/mnt/nfs/homes/hubretec/Documents/CPP42/CPP02/ex01",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-I",
+   "includes/",
+   "-g",
+   "-std=c++98",
+   "-c",
+   "src/main.cpp",
+   "-o",
+   "obj/main.o"
+  ],
+  "file": "src/main.cpp"
+ },
+ {
+  "directory": "/mnt/nfs/homes/hubretec/Documents/CPP42/CPP02/ex01",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-I",
+   "includes/",
+   "-g",
+   "-std=c++98",
+   "-c",
+   "src/Fixed.cpp",
+   "-o",
+   "obj/Fixed.o"
+  ],
+  "file": "src/Fixed.cpp"
+ }
+]

@@ -1,0 +1,9 @@
+node_modules/
+*.env
+dist/
+file.html
+backend/avatars/*
+backend/qrcode/*
+.Identifier
+.charset_channel
+.vscode/

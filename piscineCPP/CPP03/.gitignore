@@ -1,0 +1,8 @@
+.cache
+*.json
+.vscode/
+obj/
+claptrap
+scavtrap
+fragtrap
+diamondtrap

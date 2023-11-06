@@ -1,0 +1,27 @@
+CC=c++
+NAME=interface
+OBJ_DIR=obj/
+SRC_DIR=src/
+INCLUDES=includes/
+CFLAGS=-Wall -Wextra -Werror -I $(INCLUDES) -g -std=c++98
+CFILES=$(addprefix $(SRC_DIR), main.cpp AMateria.cpp Character.cpp Materias.cpp MateriaSource.cpp)
+OBJS=$(patsubst $(SRC_DIR)%.cpp, $(OBJ_DIR)%.o, $(CFILES))
+
+$(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
+	@if [ ! -d "$(dir $@)" ]; then mkdir -p $(dir $@); fi
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+
+all: $(NAME)
+
+clean:
+	rm -rf $(OBJ_DIR)
+
+fclean: clean
+	rm -rf $(NAME)
+
+re: fclean all
+
+.PHONY: all debug clean fclean re

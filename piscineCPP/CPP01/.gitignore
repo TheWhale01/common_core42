@@ -1,0 +1,12 @@
+obj/
+brainz
+horde
+cerveau
+violence
+sed
+harl
+harlFilter
+*.json
+.cache/
+.vscode/
+*.replace

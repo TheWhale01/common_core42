@@ -1,0 +1,47 @@
+version: '3.9'
+services:
+  mariadb:
+    env_file:
+      - .env
+    build: ./requirements/mariadb
+    image: mariadb
+    volumes:
+      - mariadb_vol:/var/lib/mysql
+    container_name: mariadb
+  nginx:
+    build: ./requirements/nginx
+    image: nginx
+    volumes:
+      - wordpress_vol:/var/www/html/wordpress
+    ports:
+      - "443:443"
+    container_name: nginx
+  wordpress:
+    env_file:
+      - .env
+    build: ./requirements/wordpress
+    image: wordpress
+    volumes:
+      - wordpress_vol:/var/www/html/wordpress
+    container_name: wordpress
+
+volumes:
+  mariadb_vol:
+    driver: local
+    name: db
+    driver_opts:
+      device: /home/hubretec/data/db
+      type: volume
+      o: bind
+  wordpress_vol:
+    driver: local
+    name: wp_data
+    driver_opts:
+      device: /home/hubretec/data/wp_data
+      type: volume
+      o: bind
+
+networks:
+  inception:
+    driver: bridge
+    name: inception_network

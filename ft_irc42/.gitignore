@@ -1,0 +1,9 @@
+obj/
+dep/
+ircserv
+.vscode/
+test*
+a.out
+ircserv
+callgrind*
+.nfs*

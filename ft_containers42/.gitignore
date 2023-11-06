@@ -1,0 +1,10 @@
+.vscode/
+bin/
+obj/
+containers_test/
+42TESTERS-CONTAINERS
+callgrind*
+main_1.cpp
+ft
+std
+42_container_tester
